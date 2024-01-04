@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <center>
+        <h1>Welcome to Money Tracker App</h1>
+        <p>
+            Track your spending, save effortlessly, and achieve financial goals with our intuitive Money Tracker app<br><br>
+            Empower your financial journey with our Money Tracker app—where every penny counts and managing your money becomes a seamless and rewarding experience.
+        </p>
+        <h2>What do you want to do 👇</h2>
+    </center>
+    <div class="home-button">
+        <form action="/index" method="post">
+        <button class="hmbtn" type="submit">Add Transaction</button>
+        </form>
+        <form action="/getTransactions" method="post">
+        <button class="hmbtn" type="submit">See Transactions</button>
+        </form>
+    </div>
+    
+</div>
+
+
+<%- include("partials/footer") %>

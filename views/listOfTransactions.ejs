@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <center>
+        <h1>Recent Transactions</h1>
+        
+        <table class="lot">
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Type</th>
+          </tr>
+          <% transactions.forEach(transaction => { %>
+            <tr>
+              <td><%= transaction.description%></td>
+              <td><%= transaction.amount %></td>
+              <td><%= transaction.category %></td>
+              <td><%= transaction.type %></td>
+            </tr>
+            <% }); %>
+          </table>
+          
+          <br><br><br>
+          
+          <form action="/index" method="post">
+            <button class="lotbtn" type="submit">Add Transaction</button>
+          </form>
+          <form action="/" method="get">
+            <button class="lotbtn" type="submit">Go To Home Page</button>
+          </form>
+        </center>
+          
+          
+        </div>
+
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,41 @@
+
+<%- include("partials/header") %>
+
+
+  <div class="container">
+    <center>
+      <h1>Add Transactions</h1>
+    </center>
+      <form class = "addtransact" action="/addTransaction" method="post" autocomplete="off">
+
+        <label for="description">Description:</label>
+        <input class="addinput" type="text" name="description" required >
+
+        <label for="amount">Amount:</label>
+        <input class="addinput" type="number" name="amount" required>
+
+        <label for="category">Category :</label>
+        <select class="addselect" name="category" required>
+          <option value="select">---select---</option>
+          <option value="grocery">grocery</option>
+          <option value="dine-out">dine out</option>
+          <option value="bills">bills</option>
+          <option value="others">others</option>
+        </select>
+
+        <label for="type">Type:</label>
+        <select class="addselect" name="type" required >
+          <option value="select">---select---</option>
+         <option value="income">Income</option>
+         <option value="expense">Expense</option>
+        </select>
+
+        <button class="addbtn" type="submit">Add Transaction</button>
+      </form>
+    
+  
+
+ 
+
+
+  <%- include("partials/footer") %>
